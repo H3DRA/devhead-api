@@ -1,4 +1,4 @@
-# Application Title: A Description
+# devHead API by H3DRA
 
 This application allows the user to do x, y, and z. Maybe here's a reason why I
 wanted to do this project, or came up with this idea.
@@ -11,13 +11,7 @@ wanted to do this project, or came up with this idea.
 
 ## Planning Story
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin
-coffee williamsburg af poutine fingerstache austin semiotics paleo man braid
-vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats
-shoreditch try-hard health goth intelligentsia pop-up small batch skateboard
-farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday
-carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle
-tofu.
+Lorem...
 
 ### User Stories
 
