@@ -1,45 +1,17 @@
-# devHead API by H3DRA
+## USER STORIES
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+- As a new user I want to sign up with an email and password
+- As a new user I want to be signed in after signing up
+- As an existing user I want to login with email and password
+- As a user I want to be able to change my password when logged in
+- As a user I want to be able to sign out when signed in
+- As a user I want to be able to add a post to my wall
+- As a user I want to be able to update a post I own when logged in
+- As a user I want to be able to delete a post I own when logged in
+- As a user I want to view a list of other users and links to their walls
+- As a user I want to be able to upvote or downvote posts
+- As a user I want to view a main wall of posts that can be filtered by category
 
-## Important Links
+## ERD
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
-
-## Planning Story
-
-Lorem...
-
-### User Stories
-
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
-
-### Technologies Used
-
-- jQuery
-- HTML/CSS
-- Bootstrap
-- Javascript
-
-### Unsolved Problems
-
-- Still need to ....
-- Would like to eventually ....
-
-## Images
-
-#### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
-
----
-
-#### ERD:
-![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)
+![devheadERD](https://media.git.generalassemb.ly/user/35033/files/e1a56380-b173-11eb-82e3-56e54747e6f0)
