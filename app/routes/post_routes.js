@@ -53,4 +53,15 @@ router.patch('/posts/:id', requireToken, removeBlanks, (req, res, next) => {
     .catch(next)
 })
 
+router.delete('/posts/:id', requireToken, (req, res, next) => {
+  Post.findById(req.params.id)
+  .then(handle404)
+  .then(post => {
+    requireOwnership(req, post)
+    post.deleteOne
+  })
+  .then(() => res.sendStatus(204))
+  .catch(next)
+})
+
 module.exports = router
