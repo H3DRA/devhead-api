@@ -1,5 +1,6 @@
 const express = require('express')
 const passport = require('passport')
+<<<<<<< HEAD
 const Post = require('../models/post')
 const customErrors = require('../../lib/custom_errors')
 const handle404 = customErrors.handle404
@@ -54,3 +55,14 @@ router.patch('/posts/:id', requireToken, removeBlanks, (req, res, next) => {
 })
 
 module.exports = router
+=======
+const Example = require('../models/example')
+const customErrors = require('../../lib/custom_errors')
+const handle404 = customErrors.handle404
+const requireOwnership = customErrors.requireOwnership
+const removeBlanks = require('../../lib/remove_blank_fields')
+const requireToken = passport.authenticate('bearer', { session: false })
+const router = express.Router()
+
+router.get()
+>>>>>>> b048308 (Modify readme and create route)
