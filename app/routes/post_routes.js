@@ -73,6 +73,6 @@ router.get()
 >>>>>>> b048308 (Modify readme and create route)
 =======
 router.get('/posts', requireToken (req, res, next) => {
-
+  
 })
 >>>>>>> f8fd06f (Edit route)
