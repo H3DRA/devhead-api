@@ -19,11 +19,22 @@ router.post('/posts', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// INDEX
+// INDEX (user only)
 // GET /posts
 router.get('/posts', requireToken, (req, res, next) => {
   const id = req.user.id
   Post.find({ owner: id })
+    .then(posts => {
+      return posts.map(post => post.toObject())
+    })
+    .then(posts => res.status(200).json({ posts: posts }))
+    .catch(next)
+})
+
+// INDEX (all)
+// GET /posts
+router.get('/posts/all', requireToken, (req, res, next) => {
+  Post.find()
     .then(posts => {
       return posts.map(post => post.toObject())
     })
