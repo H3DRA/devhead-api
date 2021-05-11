@@ -20,6 +20,7 @@ router.post('/posts', requireToken, (req, res, next) => {
     .catch(next)
 })
 
+<<<<<<< HEAD
 // // INDEX
 // // GET /posts
 // router.get('/posts', requireToken, (req, res, next) => {
@@ -30,6 +31,19 @@ router.post('/posts', requireToken, (req, res, next) => {
 //     .then(posts => res.status(200).json({ posts: posts }))
 //     .catch(next)
 // })
+=======
+// INDEX
+// GET /posts
+router.get('/posts', requireToken, (req, res, next) => {
+  const id = req.user.id
+  Post.find({ owner: id })
+    .then(posts => {
+      return posts.map(post => post.toObject())
+    })
+    .then(posts => res.status(200).json({ posts: posts }))
+    .catch(next)
+})
+>>>>>>> 0cac571 (Alter owner route in API)
 
 // UPDATE
 // PATCH /posts/6099578461dd6be72ba96d87
