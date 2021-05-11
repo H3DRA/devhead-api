@@ -22,7 +22,8 @@ router.post('/posts', requireToken, (req, res, next) => {
 // INDEX
 // GET /posts
 router.get('/posts', requireToken, (req, res, next) => {
-  Post.find()
+  const id = req.user.id
+  Post.find({ owner: id })
     .then(posts => {
       return posts.map(post => post.toObject())
     })
