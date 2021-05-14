@@ -5,6 +5,11 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  ownerEmail: {
+    type: String,
+    ref: 'User',
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

@@ -12,6 +12,7 @@ const router = express.Router()
 // POST /posts
 router.post('/posts', requireToken, (req, res, next) => {
   req.body.post.owner = req.user.id
+  req.body.post.ownerEmail = req.user.email
   Post.create(req.body.post)
     .then(post => {
       res.status(201).json({ post: post.toObject() })
@@ -19,16 +20,28 @@ router.post('/posts', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// // INDEX
-// // GET /posts
-// router.get('/posts', requireToken, (req, res, next) => {
-//   Post.find()
-//     .then(posts => {
-//       return posts.map(post => post.toObject())
-//     })
-//     .then(posts => res.status(200).json({ posts: posts }))
-//     .catch(next)
-// })
+// INDEX (user only)
+// GET /posts
+router.get('/posts', requireToken, (req, res, next) => {
+  const id = req.user.id
+  Post.find({ owner: id })
+    .then(posts => {
+      return posts.map(post => post.toObject())
+    })
+    .then(posts => res.status(200).json({ posts: posts }))
+    .catch(next)
+})
+
+// INDEX (all)
+// GET /posts
+router.get('/posts/all', requireToken, (req, res, next) => {
+  Post.find()
+    .then(posts => {
+      return posts.map(post => post.toObject())
+    })
+    .then(posts => res.status(200).json({ posts: posts }))
+    .catch(next)
+})
 
 // UPDATE
 // PATCH /posts/6099578461dd6be72ba96d87
@@ -53,8 +66,6 @@ router.patch('/posts/:id', requireToken, removeBlanks, (req, res, next) => {
     .catch(next)
 })
 
-// DELETE
-// All posts
 router.delete('/posts/:id', requireToken, (req, res, next) => {
   Post.findById(req.params.id)
     .then(handle404)
@@ -63,28 +74,6 @@ router.delete('/posts/:id', requireToken, (req, res, next) => {
       post.deleteOne()
     })
     .then(() => res.sendStatus(204))
-    .catch(next)
-})
-
-// INDEX (user only)
-// GET /posts
-router.get('/posts', requireToken, (req, res, next) => {
-  const id = req.user.id
-  Post.find({ owner: id })
-    .then(posts => {
-      return posts.map(post => post.toObject())
-    })
-    .then(posts => res.status(200).json({ posts: posts }))
-    .catch(next)
-})
-// INDEX (all)
-// GET /posts
-router.get('/posts/all', requireToken, (req, res, next) => {
-  Post.find()
-    .then(posts => {
-      return posts.map(post => post.toObject())
-    })
-    .then(posts => res.status(200).json({ posts: posts }))
     .catch(next)
 })
 
