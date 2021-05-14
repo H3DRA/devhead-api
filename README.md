@@ -1,4 +1,14 @@
-## USER STORIES
+# devHead
+
+## Description
+This developer-focused social-media application allows the user to mangage a list of posts. They can create new post entries, read their posts, update their pre-existing posts, and delete their posts, read other people's posts, and view a list of other users.
+
+## Important Links
+- Client Repo: [view here](https://github.com/H3DRA/devhead-client)
+- Deployed Client: [view here](https://h3dra.github.io/devhead-client/#/)
+- Deployed API: [view here](https://ancient-wildwood-16167.herokuapp.com)
+
+## User Stories
 
 - As a new user I want to sign up with an email and password
 - As a new user I want to be signed in after signing up
@@ -11,6 +21,11 @@
 - As a user I want to view a list of other users and links to their walls
 - As a user I want to be able to upvote or downvote posts
 - As a user I want to view a main wall of posts that can be filtered by category
+
+## Technologies Used
+- ReactJS
+- HTML/CSS
+- Bootstrap
 
 ## ERD
 
