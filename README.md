@@ -39,3 +39,26 @@ This developer-focused social-media application allows the user to manage a list
 ## Unsolved Problems
 - Add more dynamic messaging on successful CRUD actions
 - Make client more mobile-friendly
+
+## Catalog of Routes
+#### Auth
+|Verb   | URI Pattern   |
+|---|---|
+| POST  | /sign-up  |
+| POST  | /sign-in  |
+| DELETE  | /sign-out  |
+| PATCH  | /change-password  |
+
+#### User
+|Verb   | URI Pattern   |
+|---|---|
+| GET  | /users  |
+
+#### Posts
+|Verb   | URI Pattern   |
+|---|---|
+| POST  | /posts  |
+| GET  | /posts  |
+| GET  | /posts/all  |
+| DELETE  | /posts/:id  |
+| PATCH  | /posts/:id  |
