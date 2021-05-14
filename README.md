@@ -1,7 +1,7 @@
 # devHead
 
 ## Description
-This developer-focused social-media application allows the user to mangage a list of posts. They can create new post entries, read their posts, update their pre-existing posts, and delete their posts, read other people's posts, and view a list of other users.
+This developer-focused social-media application allows the user to manage a list of posts. They can create new post entries, read their posts, update their pre-existing posts, and delete their posts, read other people's posts, and view a list of other users.
 
 ## Important Links
 - Client Repo: [view here](https://github.com/H3DRA/devhead-client)
@@ -30,3 +30,12 @@ This developer-focused social-media application allows the user to mangage a lis
 ## ERD
 
 ![devheadERD](https://media.git.generalassemb.ly/user/35033/files/e1a56380-b173-11eb-82e3-56e54747e6f0)
+
+## Problem-solving process and strategy
+- Utlized mob programming
+- Would troubleshoot problems together through discussion, trial & error, and research via Google, stackoverflow, etc.
+- If the team couldn't find the answer, would seek help from instructors by submitting an issue request
+
+## Unsolved Problems
+- Add more dynamic messaging on successful CRUD actions
+- Make client more mobile-friendly
